@@ -2,9 +2,9 @@ import "../css/main.css"
 import React from "react"
 import ReactDOM from "react-dom"
 import TodoStore from "./TodoStore"
-import TodoList from "./TodoList"
+import TodoListAlmosafer from "./TodoListAlmosafer"
 
 const app = document.getElementById("app")
 
-ReactDOM.render(<TodoList store={TodoStore} />, app)
+ReactDOM.render(<TodoListAlmosafer store={TodoStore} />, app)
 

@@ -20,8 +20,18 @@ export class TodoStore {
     return this.todos.filter(todo => !this.filter || matchesFilter.test(todo.value))
   }
 
-  createTodo(value) {
+  setFilter = (value) => {
+    this.filter = value;
+  }
+
+  createTodo = (value) => {
     this.todos.push(new Todo(value))
+  }
+
+  setComplete = (index) => {
+    const updatedTodo = new Todo(this.todos[index].value);
+    updatedTodo.complete = !this.todos[index].complete;
+    this.todos[index] = updatedTodo;
   }
 
   clearComplete = () => {
